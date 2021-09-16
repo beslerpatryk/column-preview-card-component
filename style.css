@@ -1,0 +1,84 @@
+/* Primary */
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 15px;
+	font-family: "Lexend Deca", sans-serif;
+	display: flex;
+	justify-content: center;
+	background-color: var(--very-light-gray);
+	margin: 5rem 0;
+}
+
+.card_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 330px;
+	flex-direction: column;
+	width: 90%;
+}
+
+.card_container section {
+	/* display: flex;
+	justify-content: center;
+	flex-direction: column; */
+	padding: 3rem;
+	max-height: 440px;
+}
+
+.card_container section:nth-of-type(1) {
+	background-color: var(--bright-orange);
+}
+
+.card_container section:nth-of-type(2) {
+	background-color: var(--dark-cyan);
+}
+
+.card_container section:nth-of-type(3) {
+	background-color: var(--very-dark-cyan);
+}
+
+.card_container section h1 {
+	margin: 2rem 0;
+	font-family: "Big Shoulders Display", cursive;
+	font-size: 2.7rem;
+	color: var(--very-light-gray);
+}
+
+.card_container section p {
+	color: var(--transparent-white);
+}
+
+.card_container section a {
+	margin-top: 2rem;
+	display: inline-block;
+	flex-basis: 0;
+	border-radius: 25px;
+	padding: 0.7rem 1rem;
+	background-color: var(--very-light-gray);
+	text-decoration: none;
+	color: black;
+	mix-blend-mode: screen;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

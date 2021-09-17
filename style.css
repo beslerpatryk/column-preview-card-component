@@ -69,6 +69,7 @@ body {
 
 .card_container section p {
 	color: var(--transparent-white);
+	line-height: 3ch;
 }
 
 .card_container section a {
@@ -105,6 +106,7 @@ body {
 		display: grid;
 		align-self: center;
 		grid-template-columns: 1fr 1fr 1fr;
+		padding: 0;
 		max-width: 920px;
 		max-height: 500px;
 		overflow: hidden;
@@ -116,7 +118,8 @@ body {
 	}
 
 	.card_container section a {
-		margin-top: 5rem;
+		margin-top: 4rem;
+		align-self: flex-end;
 	}
 
 	.attribution {

@@ -1,12 +1,18 @@
-/* Primary */
 :root {
+	/* Primary */
 	--bright-orange: hsl(31, 77%, 52%);
 	--dark-cyan: hsl(184, 100%, 22%);
 	--very-dark-cyan: hsl(179, 100%, 13%);
 
+	/* Neutral */
 	--transparent-white: hsla(0, 0%, 100%, 0.75);
 	--very-light-gray: hsl(0, 0%, 95%);
+
+	/* Sizing */
+	--radius: 10px;
 }
+
+/* General */
 
 * {
 	box-sizing: border-box;
@@ -15,29 +21,30 @@
 }
 
 body {
-	font-size: 15px;
-	font-family: "Lexend Deca", sans-serif;
 	display: flex;
 	justify-content: center;
-	background-color: var(--very-light-gray);
 	margin: 5rem 0;
+	font-family: "Lexend Deca", sans-serif;
+	font-size: 15px;
+	background-color: var(--very-light-gray);
 }
+
+/* Card */
 
 .card_container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width: 330px;
-	flex-direction: column;
 	width: 90%;
+	max-width: 330px;
+	border-radius: var(--radius);
+	overflow: hidden;
 }
 
 .card_container section {
-	/* display: flex;
-	justify-content: center;
-	flex-direction: column; */
-	padding: 3rem;
 	max-height: 440px;
+	padding: 3rem;
 }
 
 .card_container section:nth-of-type(1) {
@@ -54,8 +61,8 @@ body {
 
 .card_container section h1 {
 	margin: 2rem 0;
-	font-family: "Big Shoulders Display", cursive;
 	font-size: 2.7rem;
+	font-family: "Big Shoulders Display", cursive;
 	color: var(--very-light-gray);
 }
 
@@ -64,21 +71,61 @@ body {
 }
 
 .card_container section a {
-	margin-top: 2rem;
 	display: inline-block;
-	flex-basis: 0;
-	border-radius: 25px;
-	padding: 0.7rem 1rem;
 	background-color: var(--very-light-gray);
-	text-decoration: none;
+	padding: 0.8rem 1.5rem;
+	margin-top: 2rem;
 	color: black;
+	font-family: inherit;
+	text-decoration: none;
+	border: 2px solid rgba(0, 0, 0, 0);
+	border-radius: 25px;
 	mix-blend-mode: screen;
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
+.card_container section a:hover {
+	background-color: transparent;
+	color: var(--very-light-gray);
+	border: 2px solid var(--very-light-gray);
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+.attribution {
+	display: none;
+}
+
+@media (min-width: 800px) {
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+	}
+
+	.card_container {
+		display: grid;
+		align-self: center;
+		grid-template-columns: 1fr 1fr 1fr;
+		max-width: 920px;
+		max-height: 500px;
+		overflow: hidden;
+	}
+
+	.card_container section {
+		height: 100%;
+		max-height: 100%;
+	}
+
+	.card_container section a {
+		margin-top: 5rem;
+	}
+
+	.attribution {
+		display: initial;
+		position: fixed;
+		bottom: 1rem;
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: var(--dark-cyan);
+	}
 }

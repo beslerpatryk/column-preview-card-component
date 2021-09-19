@@ -29,6 +29,16 @@ body {
 	background-color: var(--very-light-gray);
 }
 
+.sr_only {
+	position: absolute;
+	top: auto;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px);
+	white-space: nowrap;
+}
+
 /* Card */
 
 .card_container {
@@ -42,24 +52,23 @@ body {
 	overflow: hidden;
 }
 
-.card_container section {
-	max-height: 440px;
+.card_container .card_section {
 	padding: 3rem;
 }
 
-.card_container section:nth-of-type(1) {
+.card_container .card_section:nth-of-type(1) {
 	background-color: var(--bright-orange);
 }
 
-.card_container section:nth-of-type(2) {
+.card_container .card_section:nth-of-type(2) {
 	background-color: var(--dark-cyan);
 }
 
-.card_container section:nth-of-type(3) {
+.card_container .card_section:nth-of-type(3) {
 	background-color: var(--very-dark-cyan);
 }
 
-.card_container section h1 {
+.card_container .card_section h2 {
 	margin: 2rem 0;
 	font-size: 2.7rem;
 	font-family: "Big Shoulders Display", cursive;
@@ -67,12 +76,12 @@ body {
 	color: var(--very-light-gray);
 }
 
-.card_container section p {
+.card_container .card_section p {
 	color: var(--transparent-white);
 	line-height: 3ch;
 }
 
-.card_container section a {
+.card_container .card_section a {
 	display: inline-block;
 	background-color: var(--very-light-gray);
 	padding: 0.8rem 1.5rem;
@@ -85,41 +94,49 @@ body {
 	mix-blend-mode: screen;
 }
 
-.card_container section a:hover {
+.card_container .card_section a:hover {
 	background-color: transparent;
 	color: var(--very-light-gray);
 	border: 2px solid var(--very-light-gray);
+	transition: 0.3s ease-in-out;
 }
 
 .attribution {
 	display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
 	html,
 	body {
-		height: 100%;
+		min-height: 100vh;
 		margin: 0;
 	}
 
 	.card_container {
-		display: grid;
 		align-self: center;
+		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		padding: 0;
 		max-width: 920px;
-		max-height: 500px;
+		min-height: 500px;
 		overflow: hidden;
 	}
 
-	.card_container section {
+	.card_container .card_section {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
 		height: 100%;
 		max-height: 100%;
 	}
 
-	.card_container section a {
+	.card_container .card_section p {
+		margin-bottom: auto;
+	}
+
+	.card_container .card_section a {
 		margin-top: 4rem;
-		align-self: flex-end;
 	}
 
 	.attribution {
@@ -131,5 +148,6 @@ body {
 	}
 	.attribution a {
 		color: var(--dark-cyan);
+		text-decoration: none;
 	}
 }

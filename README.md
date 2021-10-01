@@ -37,8 +37,6 @@ Users should be able to:
 
 ## My process
 
-This project wasn't hard but still I learned thing or two about HTML and CSS. I start to notice that I feel more comfortable with writing code, positioning elements and setting up layouts. At the same time I pick up a lot of essential knowledge about best practices both for HTML and CSS.
-
 ### Built with
 
 -   Semantic HTML5 markup
@@ -47,6 +45,8 @@ This project wasn't hard but still I learned thing or two about HTML and CSS. I 
 -   Mobile-first workflow
 
 ### What I learned
+
+This project wasn't hard but still I learned thing or two about HTML and CSS. I start to notice that I feel more comfortable with writing code, positioning elements and setting up layouts. At the same time I pick up a lot of essential knowledge about best practices both for HTML and CSS.
 
 -   h1 - there should be always at least one h1 tag on the page. However, it is best practice to have only one h1 tag for the page. But what happens in projects like those, where there is no definite one heading that is more important than others? You can create hidden h1 tag only for screen readers. I have to dive more deeply into the topic of accessibility to fully understand the idea but it is definitely something that I wouldn't consider doing before i.e creating tags only for screenreaders.
 -   min-height: 100% on html and body elements - ensure the webpage always takes the 100% of window estate. It is great for setting up the page and allows to align everything easily. At the same time it makes sure that the page can still grow if there is a need for that
